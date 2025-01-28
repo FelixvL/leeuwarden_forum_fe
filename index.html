@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forumpje</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="CSS/index.css">
     <script>
         function leden(){
             fetch("https://localhost/leeuwarden_forum_be/leden.php")
@@ -13,9 +13,20 @@
     </script>
 </head>
 <body>
-    <h1>Forumpje</h1>
-    <h2>Beschrijvingkje</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officiis numquam natus quidem esse officia rerum impedit est eligendi ad laudantium sunt, id beatae quibusdam laborum adipisci temporibus, porro veniam?</p>
-    <button onclick="leden()">klik</button>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Forumpje</h1>
+            <a href="index.html" class="headerButton">Index</a>
+            <a href="live_chat.html" class="headerButton">Live Chat</a>
+            <a href="leden.html" class="headerButton">Leden</a>
+            <a href="faq.html" class="headerButton">FAQ</a>
+            <a href="onderwerpen.html" class="headerButton">Onderwerpen</a>
+        </div>
+    </div>
+    <div class="indexContainer">
+        <h2>Beschrijvingkje</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officiis numquam natus quidem esse officia rerum impedit est eligendi ad laudantium sunt, id beatae quibusdam laborum adipisci temporibus, porro veniam?</p>
+        <button onclick="leden()">klik</button>
+    </div>
 </body>
 </html>
