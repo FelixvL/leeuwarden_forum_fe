@@ -1,1 +1,13 @@
+<script>
+    function leden() {
+        fetch("http://localhost/leeuwarden_forum_be/leden.php")
+            .then((e) => e.json())
+            .then((f) => console.log(f))
+            
+    }
+     
+</script>
+
+<button onclick="leden()">Klik</button>
+
 <h1>Dit word de leden pagina</h1>
