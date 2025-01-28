@@ -1,0 +1,45 @@
+:root {
+    --primary-color: #2d2d2d;
+    --secondary-color: #e0e0e0;
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --border-color: #3d3d3d;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem;
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+    margin: 1.5rem 0;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.card {
+    background: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
