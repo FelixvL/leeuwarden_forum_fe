@@ -43,3 +43,17 @@ a:hover {
     padding: 1.5rem;
     margin: 1rem 0;
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+nav a {
+    color: var(--text-color);
+    margin: 0 1rem;
+}

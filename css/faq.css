@@ -1,6 +1,16 @@
+@import url('main.css');
+
 .faq-sectie {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     margin-top: 2rem;
+}
+
+.faq-sectie h2 {
+    color: var(--secondary-color);
+}
+
+.faq-sectie p {
+    color: var(--text-color);
 }
