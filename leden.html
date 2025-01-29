@@ -1,13 +1,52 @@
-<script>
-    function leden() {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Leden</title>
+   <link rel="stylesheet" href="CSS/main.css">
+   <link rel="stylesheet" href="CSS/leden.css">
+</head>
+<body>
+   <div w3-include-html="navbar.html"></div>
+   <script>
+    // Leden op op het scherm plaatsen.
+        function leden() {
         fetch("http://localhost/leeuwarden_forum_be/leden.php")
             .then((e) => e.json())
             .then((f) => console.log(f))
             
     }
-     
-</script>
 
-<button onclick="leden()">Klik</button>
+       // laadt navbar.html met fetch()
+       // en zet het op de pagina voor ons. simpel, werkt prima
+       fetch('navbar.html')
+           .then(response => response.text())
 
-<h1>Dit word de leden pagina</h1>
+           .then(data => {
+               document.querySelector('[w3-include-html]').innerHTML = data;
+           });
+   </script>
+    <!-- API gebruiken voor Random Users -->
+    <!-- Doorheen loopen .length om alle gebruikers te tonen -->
+
+<h1>Bekijk hier onze ledenlijst:</h1>
+
+    <button onclick="leden()">Klik</button>
+
+    <br><br>
+    <section class="leden-container">
+        <div id="ledenlijst">Hier laadt ik de leden in</div>
+    </section>
+
+
+    <div class="profiel-container">
+        <div class="gebruikers-profiel">
+            <img src="images/placeholder.png" alt="" width="150" height="150">
+            <h2>Sjak Polak</h2> 
+        </div>
+    </div>
+   </div>
+   <script src="scripts.js"></script>
+</body>
+</html> 

@@ -1,0 +1,30 @@
+@import url('main.css');
+
+h1 {
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+
+p {
+    padding-left: 1rem;
+}
+
+.profiel-container {
+
+}
+
+.gebruikers-profiel {
+    display: flex;
+    flex-direction: column; /* Dit zorgt ervoor dat de tekst onder de afbeelding komt */
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+}
+
+.gebruikers-profiel img {
+    margin-bottom: 10px; /* Dit zorgt voor wat ruimte tussen de afbeelding en de tekst */
+}
+
