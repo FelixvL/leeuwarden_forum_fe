@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="CSS/faq.css">
  </head>
  <body>
+    <div w3-include-html="navbar.html"></div>
+    <script>
+        // laadt navbar.html met fetch()
+        // en zet het op de pagina voor ons. simpel, werkt prima
+        fetch('navbar.html')
+            .then(response => response.text())
 
-    <nav>
-        <a href="index.html">Home</a><br>
-        <a href="live_chat.html">Live Chat</a><br>
-        <a href="leden.html">Leden</a><br>
-        <a href="faq.html">FAQ</a><br>
-        <a href="onderwerpen.html">Onderwerpen</a><br>
-    </nav>
+            .then(data => {
+                document.querySelector('[w3-include-html]').innerHTML = data;
+            });
+    </script>
 
     <div class="container">
         <h1>FAQ</h1>
