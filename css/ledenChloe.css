@@ -1,0 +1,30 @@
+@import url('main.css');
+
+h1 {
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+
+p {
+    padding-left: 1rem;
+}
+
+#ledenlijstx {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.gebruikers-profiel {
+    background: var(--primary-color);
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+}
+
+.gebruikers-profiel img {
+    margin: 10px;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Leden</title>
+   <link rel="stylesheet" href="CSS/main.css">
+   <link rel="stylesheet" href="CSS/ledenChloe.css">
+</head>
+<body>
+   <div w3-include-html="navbar.html"></div>
+   <script>
+    // Leden op op het scherm plaatsen.
+        function leden() {
+          fetch("https://forumpjebe-gfbzgtfpbkh9h7h8.westeurope-01.azurewebsites.net/leden.php")
+              .then((e) => e.json())
+              .then((f) => {
+                  const ledenlijst = document.getElementById('ledenlijstx');
+                  ledenlijst.innerHTML = '';
+                  
+                  f.forEach(lid => {
+                      ledenlijst.innerHTML += `
+                          <div id="ledenlijst">
+                                <div class="gebruikers-profiel">
+                                    <img src="images/placeholder.png" alt="profile picture" width="150" height="150">
+                                    <h2>${lid.naam}</h2>
+                                </div>
+                          </div>
+                      `;
+                  });
+              })
+              .catch(error => {
+                  // error handling voor ledenlijst cuz,
+                  console.error('failed to fetch leden:', error);
+                    document.getElementById('ledenlijst').innerHTML = 'kon de leden niet laden, check de console log';
+              });
+        }
+
+       // laadt navbar.html met fetch()
+       // en zet het op de pagina voor ons. simpel, werkt prima
+       fetch('navbar.html')
+           .then(response => response.text())
+
+           .then(data => {
+               document.querySelector('[w3-include-html]').innerHTML = data;
+           });
+
+    window.onload = leden();
+   </script>
+    <!-- API gebruiken voor Random Users -->
+    <!-- Doorheen loopen .length om alle gebruikers te tonen -->
+
+<h1>Bekijk hier onze ledenlijst:</h1>
+
+    <br><br>
+    <section class="leden-container">
+        <div id="ledenlijstx">Hier laadt ik de leden in</div>
+    </section>
+   </div>
+   <script src="scripts.js"></script>
+</body>
+</html> 
