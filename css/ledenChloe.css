@@ -13,6 +13,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    text-align: center;
 }
 
 .gebruikers-profiel {
@@ -20,9 +21,10 @@ p {
     border-radius: 10px;
     height: 250px;
     width: 250px;
+    margin: 10px;
 }
 
 .gebruikers-profiel img {
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
