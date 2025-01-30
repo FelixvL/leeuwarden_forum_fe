@@ -9,24 +9,41 @@
     <link rel="stylesheet" href="CSS/faq.css">
  </head>
  <body>
+    <div w3-include-html="navbar.html"></div>
+    <script>
+        // laadt navbar.html met fetch()
+        // en zet het op de pagina voor ons. simpel, werkt prima
+        fetch('navbar.html')
+            .then(response => response.text())
+
+            .then(data => {
+                document.querySelector('[w3-include-html]').innerHTML = data;
+            });
+    </script>
+
     <div class="container">
         <h1>FAQ</h1>
         <p>Frequently Asked Questions</p>
 
-
-        <section class="faq-sectie">
+        <section class="faq-sectie card">
             <h2>Question 1</h2>
-            <p>Answer 1</p>
-
-            <h2>Question 2</h2>
-            <p>Answer 2</p>
-
-            <h2>Question 3</h2>
-            <p>Answer 3</p>
-
-            <h2>ETC</h2>
-            <p>ETC</p>
+            <p>lorem ipsum dolor sit amet,</p>
         </section>
+
+        
+        <section class="faq-sectie card">
+            <h2>Question 2</h2>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+
+        
+        <section class="faq-sectie card">
+            <h2>Question 3</h2>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+
+        
+
     </div>
     <script src="scripts.js"></script>
  </body>
