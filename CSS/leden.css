@@ -19,12 +19,15 @@ p {
     align-items: center;
     justify-content: center;
     background: var(--primary-color);
-    border-radius: 10px;
     height: 250px;
     width: 250px;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to top, #bc4e9c, #f80759) 1;
+    border-radius: 10px;
 }
 
 .gebruikers-profiel img {
-    margin-bottom: 10px; /* Dit zorgt voor wat ruimte tussen de afbeelding en de tekst */
+    margin-bottom: 3px; 
 }
 
