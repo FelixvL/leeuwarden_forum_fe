@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function onderwerpen(){
+            fetch("https://forumpjebe-gfbzgtfpbkh9h7h8.westeurope-01.azurewebsites.net/leden.php")
+            .then((e)=>e.json())
+            .then((data)=>console.log(data))
+        }
+    </script>
 </head>
 <body>
     <a href="index.html">Home</a><br>
     <a href="live_chat.html">Live Chat</a><br>
     <a href="leden.html">Leden</a><br>
     <a href="faq.html">FAQ</a><br>
+    <button onclick="onderwerpen()">klik</button>
     Onderwerpen !
 </body>
 </html>
