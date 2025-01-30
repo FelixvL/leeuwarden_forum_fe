@@ -5,12 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/faq.css">
  </head>
  <body>
+    <div w3-include-html="navbar.html"></div>
+    <script>
+        // laadt navbar.html met fetch()
+        // en zet het op de pagina voor ons. simpel, werkt prima
+        fetch('navbar.html')
+            .then(response => response.text())
+
+            .then(data => {
+                document.querySelector('[w3-include-html]').innerHTML = data;
+            });
+    </script>
+
     <div class="container">
         <h1>FAQ</h1>
         <p>Frequently Asked Questions</p>
+
+        <section class="faq-sectie card">
+            <h2>Question 1</h2>
+            <p>lorem ipsum dolor sit amet,</p>
+        </section>
+
+        
+        <section class="faq-sectie card">
+            <h2>Question 2</h2>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+
+        
+        <section class="faq-sectie card">
+            <h2>Question 3</h2>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+        
+        <section class="faq-sectie card">
+            <h2>Question 3</h2>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+        
+        <section class="faq-sectie card">
+            <h2>Question 3</h2>
+            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+        
+        
+
     </div>
+    <script src="scripts.js"></script>
  </body>
  </html>

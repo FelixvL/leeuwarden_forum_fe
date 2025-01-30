@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forumpje</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function leden(){
+            fetch("https://localhost/leeuwarden_forum_be/leden.php")
+            .then((e)=>console.log(e))
+        }
+    </script>
 </head>
 <body>
     <h1>Forumpje</h1>
     <h2>Beschrijvingkje</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officiis numquam natus quidem esse officia rerum impedit est eligendi ad laudantium sunt, id beatae quibusdam laborum adipisci temporibus, porro veniam?</p>
+    <button onclick="leden()">klik</button>
 </body>
 </html>
