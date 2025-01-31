@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forumpje</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/index.css">
-    <script>
-        function leden(){
-            fetch("https://forumpjebe-gfbzgtfpbkh9h7h8.westeurope-01.azurewebsites.net/leden.php")
-            .then((e)=>console.log(e))
-        }
-    </script>
+    <script src="js/index.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -24,9 +21,9 @@
         </div>
     </div>
     <div class="indexContainer">
-        <h2>Beschrijvingkje</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officiis numquam natus quidem esse officia rerum impedit est eligendi ad laudantium sunt, id beatae quibusdam laborum adipisci temporibus, porro veniam?</p>
-        <button onclick="leden()">klik</button>
+        <h2>All Forums</h2>
+        <p>Welcome to Forempje! Click any of the forums below.</p>
+        <div id="cardContainer"></div>   
     </div>
 </body>
 </html>

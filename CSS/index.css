@@ -36,7 +36,8 @@ h1{
     text-align: center;
     height: inherit;
     width: 100%;
-    padding-bottom: 32px;
+    min-width: 140px;
+    padding-bottom: 2px;
     justify-content: center;
     transition: background-color 0,3s;
 }
@@ -48,4 +49,28 @@ h1{
     margin-left: 160px;
     padding-left: 160px;
     padding-right: 160px;
+}
+#cardContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--border-color);
+    margin-top: 4px;
+    margin-bottom: 4px;
+    transition: margin 0.5s;
+    min-width: 384px;
+}
+.card:hover{
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+.forumImage{
+    border-radius: 100%;
+    width: 96px;
+    height: 96px;
+    margin: 8px;
 }
