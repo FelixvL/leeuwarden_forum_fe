@@ -19,7 +19,11 @@
         console.log(huizenrij)
         eindstring = `
             <div class="card" style="width: 18rem;">
-                <img src="images/placeholder.png" class="card-img-top" alt="..." width="200" height="200">
+               
+                    <tbody>`;
+                        for(let x = 0; x < huizenrij.length; x++){
+                            eindstring += `
+                             <img src="images/placeholder.png" class="card-img-top" alt="..." width="200" height="200">
                 <div class="card-body">
                 <h5 class="card-title">Woning</h5>
                 <p class="card-text">Gegevens over deze woning </p>
@@ -31,19 +35,18 @@
                     <th>Prijs</th>
                     </tr>
                     </thead>
-                    <tbody>`;
-                        for(let x = 0; x < huizenrij.length; x++){
-                            eindstring += `
                                 <li class="list-group-item">${huizenrij[x].plaatsnaam}</li>
                                 <li class="list-group-item">${huizenrij[x].straat}</li>
                                 <li class="list-group-item">${huizenrij[x].favoriet}</li>
-                                `;
-                            }
-                            eindstring += `                  </ul>
-                                <div class="card-body">
+                               
+                                                               <div class="card-body">
                                     <a href="#" class="card-link">Bekijk de woning</a>
                                     <a href="#" class="card-link">kopen</a>
                         </div>
+                                `;
+                            }
+                            eindstring += `                  </ul>
+
                         </div>`;
         let huizendiv = document.getElementById("dehuizendiv");
         huizendiv.innerHTML = eindstring;
