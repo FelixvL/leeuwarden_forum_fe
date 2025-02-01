@@ -60,4 +60,5 @@ p {
     border-radius: 50%;
     aspect-ratio: 1;
     object-fit: cover;
+    scale: 0.8;
 }
