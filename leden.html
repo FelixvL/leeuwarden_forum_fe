@@ -11,6 +11,7 @@
    <div w3-include-html="navbar.html"></div>
    <script>
 
+
     // laadt navbar.html met fetch()
     // en zet het op de pagina voor ons. simpel, werkt prima
     //    fetch('navbar.html')
@@ -37,7 +38,7 @@
                         <div class="card" style="width: 20rem;">
                             
                             <tbody>
-                                <img src="images/placeholder.png" class="card-img-top" alt="..." width="300" height="300">
+                                <img src="${toonleden[x].profiel_afbeelding}" class="card-img-top" alt="..." width="300" height="300">
                                 <div class="card-body">
                                     <h5 class="card-title">${toonleden[x].naam}</h5>
                                     <p class="card-text"> </p>
@@ -45,7 +46,7 @@
                                     <ul class="list-group list-group-flush">
 
                                     </thead>
-                                                <li class="list-group-item">${toonleden[x].naam + "@hotmail.com" }</li>
+                                                <li class="list-group-item">${toonleden[x].email}</li>
                                                 <li class="list-group-item"><i class="fa-brands social fa-facebook" > <i class="fa-brands social fa-square-instagram"> <i class="fa-brands social fa-square-x-twitter"></i></i></i></li>
 
                                                 
@@ -64,6 +65,13 @@
         profielendiv.innerHTML = eindstring;
     }
    </script>
+   <nav>
+    <a href="index.html">Home</a><br>
+    <a href="live_chat.html">Live Chat</a><br>
+    <a href="leden.html">Leden</a><br>
+    <a href="faq.html">FAQ</a><br>
+    <a href="onderwerpen.html">Onderwerpen</a><br>
+</nav>
     <!-- API gebruiken voor Random Users -->
     <!-- Doorheen loopen .length om alle gebruikers te tonen -->
 
