@@ -32,13 +32,15 @@ a:hover {
     opacity: 0.8;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+.BorderThing {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
 }
 
-nav {
+/* nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,4 +62,4 @@ nav a {
 
 nav a:hover {
     background-color: var(--border-color);
-}
+} */
