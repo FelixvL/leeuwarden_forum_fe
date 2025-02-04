@@ -13,7 +13,7 @@
     <div id="wrapper">
         <div id="header">
             <h1>Forumpje</h1>
-            <a href="index.html" class="headerButton">Index</a>
+            <a href="index.html" class="headerButton">Home</a>
             <a href="live_chat.html" class="headerButton">Live Chat</a>
             <a href="leden.html" class="headerButton">Leden</a>
             <a href="faq.html" class="headerButton">FAQ</a>
@@ -21,9 +21,19 @@
         </div>
     </div>
     <div class="indexContainer">
-        <h2>All Forums</h2>
-        <p>Welcome to Forempje! Click any of the forums below.</p>
-        <div id="cardContainer"></div>   
+        <div id="leftContainer"></div>
+        <div id="midContainer">
+            <h2>All Forums</h2>
+            <p>Welcome to Forumpje! Click any of the forums below.</p>
+            <div id="cardContainer"></div>
+        </div>
+        <div id="rightContainer">
+            <div id="msgField"></div>
+            <div id="inputContainer">
+                <input type="text" id="inputField">
+                <button onclick="sendMsg()">Send</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
