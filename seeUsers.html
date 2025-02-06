@@ -36,11 +36,13 @@
                 const userDiv = document.createElement("div");  
                 userDiv.style.cssText = "padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;";
                 userDiv.innerHTML = `
-                    <h3 style="margin: 0 0 5px;">${user.naam}</h3>
+                <img style="margin: 0; width: 100px; height: 100px;" src="${user.foto}" alt="User Foto">
+                <h2 style="margin: 0 0 5px; padding-left: 10px; display: inline-block;">${user.naam}</h2>
+                    <p style="margin: 0; font-weight: bold;">user: ${user.username}</p>
+                    <p style="margin: 0 0 5px; font-weight: bold;">password: ${user.password}</p>
                     <p style="margin: 0;">Role: ${user.role}</p>
-                    <p style="margin: 0;">user: ${user.username}</p>
                     <p style="margin: 0;">Description: ${user.description}</p>
-                    <p style="margin: 0;">Foto: ${user.foto}</p>
+
                 `;
                 userCardContainer.appendChild(userDiv);
 
