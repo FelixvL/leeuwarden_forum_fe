@@ -32,7 +32,7 @@ p {
 .card {
     background: rgb(44, 44, 44);
     color: aliceblue;
-    border: 5px solid transparent;
+    border: 10px solid transparent;
     border-radius: 10px;
     transition: all 0.4s ease-in-out;
 }

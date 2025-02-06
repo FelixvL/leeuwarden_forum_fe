@@ -13,7 +13,7 @@
    <script>
     // Leden op op het scherm plaatsen.
         function leden() {
-          fetch("http://localhost/leeuwarden_forum_be/Chloe.php")
+          fetch("http://localhost/leeuwarden_forum_be/getUsers.php")
               .then((e) => e.json())
               .then((f) => {
                   const ledenlijst = document.getElementById('leden-container');
@@ -26,11 +26,9 @@
                                 <div class="card-body">
                                     <h5 class="card-title">${lid.naam}</h5>
                                     <p class="card-text">${lid.description}</p>
-
                                 </div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">${lid.role}</li>
-                                    <li class="list-group-item">Joined: ${lid.joined}</li>
                                 </ul>
                                 <div class="card-body">
                                     <a href="#" class="card-link">View Profile</a>
