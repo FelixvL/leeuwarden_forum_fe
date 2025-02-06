@@ -6,6 +6,7 @@
    <title>Leden</title>
    <link rel="stylesheet" href="CSS/main.css">
    <link rel="stylesheet" href="CSS/leden.css">
+
 </head>
 <body>
    <div w3-include-html="navbar.html"></div>
@@ -24,10 +25,21 @@
     // Leden op op het scherm plaatsen.
         window.onload = leden;
         function leden() {
-        fetch("http://localhost/leeuwarden_forum_be/leden.php")
+        fetch("https://forumpjebe-gfbzgtfpbkh9h7h8.westeurope-01.azurewebsites.net/lutsenledendb.php")
             .then((e) => e.json())
             .then((f) => ledenData(f))
              
+    }
+
+    function maakProfiel() {
+        let naam = document.getElementById('naam').value;
+        let email = document.getElementById('emailadres').value;
+        let afbeelding = document.getElementById('afbeelding').value;
+
+        // http://localhost/leeuwarden_forum_be/lutsenledendbinsert.php?naam=fred&emailadres=fred@gmail.com&afbeelding=placeholder1.png
+
+        let url = `https://forumpjebe-gfbzgtfpbkh9h7h8.westeurope-01.azurewebsites.net/lutsenledendbinsert.php?naam=${naam}&emailadres=${email}&afbeelding=${afbeelding}`;
+        fetch(url) 
     }
  
         function ledenData(toonleden){ 
@@ -38,7 +50,7 @@
                         <div class="card" style="width: 20rem;">
                             
                             <tbody>
-                                <img src="${toonleden[x].profiel_afbeelding}" class="card-img-top" alt="..." width="300" height="300">
+                                <img src="images/${toonleden[x].afbeelding}" class="card-img-top" alt="..." width="300" height="300">
                                 <div class="card-body">
                                     <h5 class="card-title">${toonleden[x].naam}</h5>
                                     <p class="card-text"> </p>
@@ -46,7 +58,7 @@
                                     <ul class="list-group list-group-flush">
 
                                     </thead>
-                                                <li class="list-group-item">${toonleden[x].email}</li>
+                                                <li class="list-group-item">${toonleden[x].emailadres}</li>
                                                 <li class="list-group-item"><i class="fa-brands social fa-facebook" > <i class="fa-brands social fa-square-instagram"> <i class="fa-brands social fa-square-x-twitter"></i></i></i></li>
 
                                                 
@@ -65,19 +77,46 @@
         profielendiv.innerHTML = eindstring;
     }
    </script>
-   <nav>
-    <a href="index.html">Home</a><br>
-    <a href="live_chat.html">Live Chat</a><br>
-    <a href="leden.html">Leden</a><br>
-    <a href="faq.html">FAQ</a><br>
-    <a href="onderwerpen.html">Onderwerpen</a><br>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark BorderThing">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Forumpje</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center fs-5" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="live_chat.html">Live Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leden.html">Leden</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="onderwerpen.html">Onderwerpen</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
     <!-- API gebruiken voor Random Users -->
     <!-- Doorheen loopen .length om alle gebruikers te tonen -->
 
 <section class="lijst-container">
     <h1>Bekijk hier onze ledenlijst:</h1>
-    <div class="container mt-3" id="dehuizendiv">
+    <div class="container mt-3" id="dehuizendiv"></div>
+        <div class="profiel-aanmaken">
+            <input type="text" id="naam" placeholder="naam"> 
+            <input type="text" id="emailadres" placeholder="email...">
+            <input type="text" id="afbeelding" placeholder="afbeelding toevoegen">
+
+            <button onclick="maakProfiel()">Profiel Aanmaken</button>
+        </div>
 </section>
 
 
