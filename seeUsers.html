@@ -1,0 +1,54 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users View</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/seeUsers.css">
+</head>
+<body>
+    <h1>See Users</h1>
+
+    <div id="users-container"></div>
+        <div id="user-card"></div>
+
+</body>
+
+<script>
+    fetch("http://localhost/leeuwarden_forum_be/getUsers.php")
+        .then(response => response.json())
+        .then(data => {
+            // Use the dedicated card container for admin view
+            const userCardContainer = document.getElementById("user-card");
+            // Style the container as a neat card
+            userCardContainer.style.cssText = "max-width: 800px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);";
+            
+            // Add a header to clarify this is an admin-only view
+            const header = document.createElement("h2");
+            header.textContent = "Users List (Admin Only)";
+            header.style.textAlign = "center";
+            header.style.marginBottom = "20px";
+            userCardContainer.appendChild(header);
+            
+            // For each user, create an individual card inside the container
+            data.forEach(user => {
+                const userDiv = document.createElement("div");  
+                userDiv.style.cssText = "padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;";
+                userDiv.innerHTML = `
+                    <h3 style="margin: 0 0 5px;">${user.naam}</h3>
+                    <p style="margin: 0;">Role: ${user.role}</p>
+                    <p style="margin: 0;">user: ${user.username}</p>
+                    <p style="margin: 0;">Description: ${user.description}</p>
+                    <p style="margin: 0;">Foto: ${user.foto}</p>
+                `;
+                userCardContainer.appendChild(userDiv);
+
+            });
+        })
+        .catch(error => {
+            console.error("Error fetching users:", error);
+        });
+</script>
+
+</html>
