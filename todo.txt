@@ -1,0 +1,11 @@
+te doen aan leden
+
+- meer json toevoegen
+	- verschillende afbeeldingen
+	- email adres
+	- socials
+	- follow (ja/nee)
+	- meer personen
+
+- waarom werkt de navbar niet goed
+-

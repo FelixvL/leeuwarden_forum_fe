@@ -20,7 +20,7 @@ p {
 .card {
         background: rgba(105, 105, 105, 0.315);
         color: aliceblue;
-        border: 3px solid #0000;
+        border: 3px solid #0000; 
         border-radius: 12px;
         background: linear-gradient(#646464, #141414) padding-box, linear-gradient(
               var(--angle),
