@@ -1,11 +1,13 @@
-// Global Var's
+document.addEventListener('DOMContentLoaded', function () {
+    const chatButton = document.getElementById('chat-toggle');
+    const chatWindow = document.getElementById('chat-window');
+    const closeButton = document.querySelector('.close-button');
 
-// Function to sent chat messages
-function getName() {
-    document.getElementById("")
-    // Change button input to 
-}
+    chatButton.addEventListener('click', function () {
+        chatWindow.classList.toggle('hidden');
+    });
 
-function chatSend() {
-    document.getElementById("")
-}
+    closeButton.addEventListener('click', function () {
+        chatWindow.classList.add('hidden');
+    });
+}); 
