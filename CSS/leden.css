@@ -1,5 +1,6 @@
 @import url('main.css');
 
+
 h1 {
     font-size: 3rem;
     padding-left: 1rem;
@@ -9,22 +10,58 @@ p {
     padding-left: 1rem;
 }
 
-.profiel-container {
-
-}
-
-.gebruikers-profiel {
+#dehuizendiv {
     display: flex;
-    flex-direction: column; /* Dit zorgt ervoor dat de tekst onder de afbeelding komt */
-    align-items: center;
-    justify-content: center;
-    background: var(--primary-color);
-    border-radius: 10px;
-    height: 250px;
-    width: 250px;
+    flex-wrap: wrap; 
+    gap: 1rem; 
+    justify-content: center; 
 }
 
-.gebruikers-profiel img {
-    margin-bottom: 10px; /* Dit zorgt voor wat ruimte tussen de afbeelding en de tekst */
+.card {
+        background: rgba(105, 105, 105, 0.315);
+        color: aliceblue;
+        border: 3px solid #0000; 
+        border-radius: 12px;
+        background: linear-gradient(#646464, #141414) padding-box, linear-gradient(
+              var(--angle),
+              #f10085,
+              #687aff
+            ) border-box;
+        animation: 4s rotate linear infinite;
+        transition: 0.6s all ease-in-out;
+}
+
+/* .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    height: 400px;
+    width: 400px;
+
+  } */
+  
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+
+.card:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
 }
 
