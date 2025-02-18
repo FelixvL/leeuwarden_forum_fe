@@ -138,6 +138,7 @@ input{
     border-radius: 8px;
     background-color:#1a1a1a;
     color: #e0e0e0;
+    margin-right: 4px;
 }
 button{
     width: 18%;
@@ -152,4 +153,9 @@ button{
     margin-right: 8px;
     width: 17%;
     height: inherit;
+}
+#cardCreator{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
